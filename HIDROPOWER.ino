@@ -1,5 +1,5 @@
 /* Program : IOT - PV HMI in Node-RED 
- * Membaca V,I dan P dari PV serta V1 dan V2
+ * Membaca V,I dan P dari PLTA serta V1 dan V2
  * Mengatur hidup/mati LED ESP32
  * Mengatur kecerahan LED 
  * © Eko M.B
