@@ -4,14 +4,14 @@
  */
 
 void pvMeasure(unsigned ts) {
-  v = ina219.getBusVoltage_V();
-  ma = ina219.getCurrent_mA();
-  mw = ina219.getPower_mW();
+  hidro_v = ina219.getBusVoltage_V();
+  hidro_ma = ina219.getCurrent_mA();
+  hidro_mw = ina219.getPower_mW();
 
   //Masukan ke array untuk di publish
-  inputs[V] = v*1000; //dikirim ke dashboard dalam satuan mV
-  inputs[I] = ma;
-  inputs[P] = mw;
+  inputs[V] = hidro_v*1000; //dikirim ke dashboard dalam satuan mV
+  inputs[I] = hidro_ma;
+  inputs[P] = hidro_mw;
 
   //mengukur tegangan V1 dan V2 serta masukan ke data untuk publisher
   load_V1 = analogReadMv(DI0);
@@ -20,7 +20,7 @@ void pvMeasure(unsigned ts) {
   inputs[V2] = load_V2;
 
   // hitung total energi
-  joule += mw * (0.001 * ts); 
+  hidro_joule += mw * (0.001 * ts); 
 }
 
 
@@ -41,7 +41,7 @@ void pvDisplay() {
   }
   
   // tambah data baru ke chart, konversi
-  chart[0] = pv_mw * CHART_SPAN / PV_MW_SPAN;
+  chart[0] = hidro_mw * CHART_SPAN / PV_MW_SPAN;
   if (chart[0] > CHART_SPAN)
     chart[0] = CHART_SPAN;
 
@@ -50,13 +50,13 @@ void pvDisplay() {
 
   // format tampilan text
   sprintf(buff, "V:%04.2f I:%04.2f P:%05.1f RPM:%d",
-    v, ma, mw, motor_rpm);
+    hidro_v, hidro_ma, hidr0_mw, motor_rpm);
 
   oled.clearDisplay();
   oled.setCursor(0,0);
   oled.print(buff);
 
-  if (pv_display_mode == 0) {
+  if (hidro_display_mode == 0) {
     // plot chart
     for(int i=1; i<D_WIDTH; i++) {
       oled.drawLine(i, D_HEIGHT-chart[i-1], i+1, D_HEIGHT-chart[i], WHITE);

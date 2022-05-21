@@ -4,8 +4,8 @@
 
 
 // Timer untuk loop periodik
-Periodic pv_p1(ts_measure);
-Periodic pv_p2(ts_display);
+Periodic hidro_p1(ts_measure);
+Periodic hidro_p2(ts_display);
 Periodic pView(1000);
 
 Button btn1(BT1);
@@ -30,8 +30,8 @@ void setup() {
 }
 
 void loop() {
-  if (pv_p1.isTime()) {
-    pvMeasure(pv_p1.getPeriode());
+  if (hidro_p1.isTime()) {
+    pvMeasure(hidro_p1.getPeriode());
     optoMeasure();
   }
   else if (pv_p2.isTime()) {
