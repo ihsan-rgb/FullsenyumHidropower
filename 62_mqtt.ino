@@ -11,8 +11,8 @@ char* input_tags[] = {"I", "V", "P", "RPM", "V1", "V2"};
 float inputs[I_MAX];
 
 //Variabel untuk Subscribe
-enum O_TAGS {L0, PWM, O_MAX};
-char* output_tags[] = {"L0", "PWM"};
+enum O_TAGS {L0, L1, PWM, O_MAX};
+char* output_tags[] = {"L0", "L1" "PWM"};
 int outputs[O_MAX] = {0, 0};
  
 //MQTT
