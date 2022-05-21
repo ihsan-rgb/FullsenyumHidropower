@@ -32,6 +32,7 @@ void setup() {
 void loop() {
   if (pv_p1.isTime()) {
     pvMeasure(pv_p1.getPeriode());
+    optoMeasure();
   }
   else if (pv_p2.isTime()) {
     pvDisplay();   

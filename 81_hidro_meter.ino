@@ -45,9 +45,12 @@ void pvDisplay() {
   if (chart[0] > CHART_SPAN)
     chart[0] = CHART_SPAN;
 
+  //import RPM
+  int motor_rpm = optoGetRPM();
+
   // format tampilan text
-  sprintf(buff, "V:%04.2f I:%04.2f P:%05.1f",
-    pv_v, pv_ma, pv_mw);
+  sprintf(buff, "V:%04.2f I:%04.2f P:%05.1f RPM:%d",
+    v, ma, mw, motor_rpm);
 
   oled.clearDisplay();
   oled.setCursor(0,0);
