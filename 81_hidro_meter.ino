@@ -7,11 +7,13 @@ void pvMeasure(unsigned ts) {
   hidro_v = ina219.getBusVoltage_V();
   hidro_ma = ina219.getCurrent_mA();
   hidro_mw = ina219.getPower_mW();
+  motor_rpm = optoGetRPM();
 
   //Masukan ke array untuk di publish
   inputs[V] = hidro_v*1000; //dikirim ke dashboard dalam satuan mV
   inputs[I] = hidro_ma;
   inputs[P] = hidro_mw;
+  inputs[RPM] = motor_rpm;
 
   //mengukur tegangan V1 dan V2 serta masukan ke data untuk publisher
   load_V1 = analogReadMv(DI0);
