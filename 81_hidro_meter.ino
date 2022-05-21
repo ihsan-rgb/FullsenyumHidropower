@@ -20,7 +20,7 @@ void pvMeasure(unsigned ts) {
   inputs[V2] = load_V2;
 
   // hitung total energi
-  pv_joule += pv_mw * (0.001 * ts); 
+  joule += mw * (0.001 * ts); 
 }
 
 

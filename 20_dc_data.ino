@@ -1,23 +1,13 @@
 /*
- * Data untuk DC motor dan Opto Coupler
+ * Data untuk  Opto Coupler
  */
 
-// konstanta untuk PWM motor
-#define PWM_CHANNEL 0
-#define PWM_RES   8
 
-#define PWM_MIN 0
-#define PWM_MAX 255
 
 // pin yang digunakan
-int pin_motorA = DO0;
-int pin_motorB = DO1;
-int pin_opto = DI0;
+int pin_opto = DI3;
 
-// variabel kontrol/pengukuran motor
-int motor_freq = 15;  // sesuaikan yang tepat untuk motor
-int motor_pwm = 0;
-int motor_rpm = 0;
+
 
 // variabel pengukuran opto_coupler
 portMUX_TYPE opto_mux = portMUX_INITIALIZER_UNLOCKED;

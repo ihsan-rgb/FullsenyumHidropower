@@ -7,10 +7,10 @@
 #define PV_MW_MAX 60
 #define PV_MW_SPAN (PV_MW_MAX-PV_MW_MIN)
 
-float pv_v;
-float pv_ma;
-float pv_mw;
-float pv_joule;
+float v;
+float ma;
+float mw;
+float joule;
 
 //Aalog Input tambahan
 float load_V1;
