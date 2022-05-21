@@ -6,7 +6,7 @@
  */
 
 //Variabel untuk Publish
-enum I_TAGS {I, V, P, V1, V2, RPM, I_MAX}; //tanpa angka = data dari INA219
+enum I_TAGS {I, V, P, RPM, V1, V2 I_MAX}; //tanpa angka = data dari INA219
 char* input_tags[] = {"I", "V", "P", "RPM", "V1", "V2"};
 float inputs[I_MAX];
 
