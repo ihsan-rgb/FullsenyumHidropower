@@ -1,8 +1,8 @@
 /*
  * Fungsi dasar MQTT
  * Konvensi nama topik
- * TOPIC_BASE / NODE(Regu/NIM) / IN / TAG; Publish-> LABTF2/K1-03/13320039/IN/TAG
- * TOPIC_BASE / NODE(Regu/NIM)/ OUT / TAG; Subscribe-> LABTF2/K1-03/13320039/IN/TAG
+ * TOPIC_BASE / NODE(Regu/NIM) / IN / TAG; Publish-> LABTF2/K1-03/IN/TAG
+ * TOPIC_BASE / NODE(Regu/NIM)/ OUT / TAG; Subscribe-> LABTF2/K1-03/OUT/TAG
  */
 
 //Variabel untuk Publish
