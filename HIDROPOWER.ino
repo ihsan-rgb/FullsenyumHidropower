@@ -20,4 +20,4 @@
 #define PROG_NAME "IOT - Photo Voltage"
 #define PROG_VERSION  "1.0"
 
-#define NODE "K1-03/13320014" //Ganti dengan Regu/NIM anda
+#define NODE "K1-03" //Ganti dengan Regu/NIM anda

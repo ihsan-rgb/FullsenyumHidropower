@@ -1,12 +1,12 @@
 /*
  * Fungsi dasar MQTT
  * Konvensi nama topik
- * TOPIC_BASE / NODE(Regu/NIM) / IN / TAG; Publish-> labtf2/k4/13319037/in/tag
- * TOPIC_BASE / NODE(Regu/NIM)/ OUT / TAG; Subscribe-> labtf2/k4/13319037/out/tag
+ * TOPIC_BASE / NODE(Regu/NIM) / IN / TAG; Publish-> LABTF2/K1-03/IN/TAG
+ * TOPIC_BASE / NODE(Regu/NIM)/ OUT / TAG; Subscribe-> LABTF2/K1-03/OUT/TAG
  */
 
 //Variabel untuk Publish
-enum I_TAGS {I, V, P, RPM, V1, V2 I_MAX}; //tanpa angka = data dari INA219
+enum I_TAGS {I, V, P, RPM, V1, V2, I_MAX}; //tanpa angka = data dari INA219
 char* input_tags[] = {"I", "V", "P", "RPM", "V1", "V2"};
 float inputs[I_MAX];
 
