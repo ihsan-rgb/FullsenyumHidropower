@@ -6,13 +6,13 @@
  */
 
 //Variabel untuk Publish
-enum I_TAGS {I, V, P, RPM, V1, V2 I_MAX}; //tanpa angka = data dari INA219
+enum I_TAGS {I, V, P, RPM, V1, V2, I_MAX}; //tanpa angka = data dari INA219
 char* input_tags[] = {"I", "V", "P", "RPM", "V1", "V2"};
 float inputs[I_MAX];
 
 //Variabel untuk Subscribe
-enum O_TAGS {L0, L1, PWM, O_MAX};
-char* output_tags[] = {"L0", "L1" "PWM"};
+enum O_TAGS {L0, L1, O_MAX};
+char* output_tags[] = {"L0", "L1"};
 int outputs[O_MAX] = {0, 0};
  
 //MQTT
